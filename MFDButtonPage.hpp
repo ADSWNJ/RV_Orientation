@@ -65,7 +65,7 @@ class MFDButtonPage
 
             \param mfdInstance - Instance of your MFD class
         */
-        void SwitchPage( MFDClass * mfdInstance, int page = -1 ) const;
+        void SwitchPage( MFDClass * mfdInstance, int page) const;
 
         /// Reacts on mouse clicks on buttons
         /**
@@ -199,9 +199,9 @@ template <class MFDClass>
 MFDButtonPage<MFDClass>::~MFDButtonPage() {}
 
 template <class MFDClass>
-void MFDButtonPage<MFDClass>::SwitchPage( MFDClass * mfdInstance, int page = -1 )  const
+void MFDButtonPage<MFDClass>::SwitchPage( MFDClass * mfdInstance, int page)  const
 {
-    if (page == -1) page = (m_i++); // e.g. use SwitchPage(mfd) to increment page, and SwitchPage(mfd,2) to select specific page 2. 
+    if (page == -1) page = (m_i++); // e.g. use SwitchPage(mfd, -1) to increment page, and SwitchPage(mfd,2) to select specific page 2. 
     m_i = (page) % m_pages.size(); // increment index, but not beyond the size
     mfdInstance->InvalidateButtons(); // redraw buttons
 }

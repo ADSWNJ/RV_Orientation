@@ -16,6 +16,7 @@
 
 
 #include "RVO_Cores.hpp" 
+#include "MMExt2_Basic.hpp"
 #include "EnjoLib/IDrawsHUD.hpp"   
 
 class RV_Orientation: public MFD2, public EnjoLib::IDrawsHUD
@@ -81,6 +82,9 @@ protected:
   oapi::Pen *ArrowPen[3];
   oapi::Brush *ArrowBrush[3];
   oapi::Pen *GuidePen[3];
+
+  //Module Messaging interface
+  MMExt2::Basic modMsg;
 
   // Internal functions
   void DrawArrow(oapi::Sketchpad *skp, bool fill, bool straight, int x, int y, int scale, VECTOR3 drot);

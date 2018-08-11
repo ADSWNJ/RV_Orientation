@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{31bc3a78-5022-4543-afc6-f392eea45111}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MFDButtonPage.hpp">
@@ -74,5 +77,13 @@
     <ClCompile Include="ParseFunctions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Rendezvous Orientation 3.docx">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="Rendezvous Orientation 3.pdf">
+      <Filter>Docs</Filter>
+    </None>
   </ItemGroup>
 </Project>

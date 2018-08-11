@@ -396,7 +396,8 @@ const char* RV_Orientation::GetModuleName() const {
 }
 
 void RV_Orientation::DrawArrow(oapi::Sketchpad *skp, bool fill, bool straight, int x, int y, int scale, VECTOR3 drot) {
-  const int s = scale / 4;
+  const int si = scale / 4;
+  const double s = (double) si;
   int ptn = 12;
   VECTOR3 rot = {drot.x*PI/180,drot.y*PI/180,drot.z*PI/180};
   const VECTOR3 e = {0,0,500};

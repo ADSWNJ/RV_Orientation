@@ -25,7 +25,7 @@ bool RV_Orientation::Update (oapi::Sketchpad *skp)
     return CalibrationUpdate( skp );
   }
 
-  Title (skp, "RV Orientation");
+  Title (skp, "RV Orientation 3.05");
 	// Draws the MFD title
 
   int l = 3;

@@ -59,7 +59,6 @@
 #include "RVO_Cores.hpp"
 #include "RVO_DialogFunc.hpp"
 #include "MFDPersist.hpp"
-#include "EnjoLib/ModuleMessagingExt.hpp"
 
 // =======================================================================
 // Global variables
@@ -105,8 +104,7 @@ DLLCLBK void opcPreStep(double SimT,double SimDT,double mjd) {
 
 
 // Constructor
-RV_Orientation::RV_Orientation (DWORD w, DWORD h, VESSEL *vessel, UINT mfd)
-: MFD2 (w, h, vessel), EnjoLib::IDrawsHUD()
+RV_Orientation::RV_Orientation (DWORD w, DWORD h, VESSEL *vessel, UINT mfd) : modMsg("RV_Orientation"), MFD2 (w, h, vessel), EnjoLib::IDrawsHUD()
 {
   if (!g_SC) {
     g_SC = new RVO_GCore;                     // First time only for RV Orientation in this Orbiter session. Init the static core.
@@ -154,7 +152,7 @@ RV_Orientation::RV_Orientation (DWORD w, DWORD h, VESSEL *vessel, UINT mfd)
 
 
     int toi;
-    if (EnjoLib::ModuleMessagingExt().ModMsgGet("LaunchMFD","TargetObjectIndex", &toi)) {
+    if (modMsg.Get("LaunchMFD","TargetObjectIndex", &toi)) {
 			// Work with objIndex.value
 			OBJHANDLE hTgt = oapiGetObjectByIndex(toi);
 			if (hTgt && oapiIsVessel(hTgt)) {
@@ -164,7 +162,7 @@ RV_Orientation::RV_Orientation (DWORD w, DWORD h, VESSEL *vessel, UINT mfd)
 					char tmpMsg[750];
 					if (!LC->showMessage) LC->Message[0] = '\0';
 					LC->showMessage = true;
-					sprintf_s(tmpMsg,"Target %s imported from LaunchMFD!\n\n\n%s", VC->TargetText, LC->Message);	
+					sprintf_s(tmpMsg,"LaunchMFD target %s set!\n\n\n%s", VC->TargetText, LC->Message);	
 					sprintf_s(LC->Message,"%s", tmpMsg);
 				}
 			}

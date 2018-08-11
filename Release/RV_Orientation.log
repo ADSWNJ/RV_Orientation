@@ -1,0 +1,9 @@
+﻿  RVO_MFDUpdate.cpp
+  RV_Orientation.cpp
+     Creating library O:\Orbiter2016\Modules\Plugin\RV_Orientation.lib and object O:\Orbiter2016\Modules\Plugin\RV_Orientation.exp
+  Generating code
+  2 of 610 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  RV_Orientation.vcxproj -> O:\Orbiter2016\Modules\Plugin\RV_Orientation.dll
