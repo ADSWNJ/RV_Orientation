@@ -3,7 +3,7 @@
 //	Rendezvous Orientation MFD (RV_Orientation)
 //	===========================================
 //
-//	Copyright (C) 2013	Andrew (ADSWNJ) Stokes
+//	Copyright (C) 2013-2018	Andrew (ADSWNJ) Stokes
 //                   All rights reserved
 //
 //	Description:
@@ -49,6 +49,7 @@
 //  V3.02 Minor feature: import target from LaunchMFD, thanks to my buddy Enjo's ModuleMessaging code!
 //  V3.03 Minor feature: support Orion MPCV with interesting thruster configs
 //  V3.04 updated for MM Ext
+//  V3.05 Updated for MMExt2, VS2017, static linkage, and fixing for Orbiter 2016 HUD Drawing for XR vessels
 // ================================================================================================
 
 #define STRICT

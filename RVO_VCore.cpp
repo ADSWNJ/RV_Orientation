@@ -3,7 +3,7 @@
 //	Rendezvous Orientation MFD (Vessel Core Persistence)
 //	====================================================
 //
-//	Copyright (C) 2013	Andrew (ADSWNJ) Stokes
+//	Copyright (C) 2013-2018	Andrew (ADSWNJ) Stokes
 //                   All rights reserved
 //
 //	See RV_Orientation.cpp
